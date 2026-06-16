@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <h1 id="nome"></h1>
+    <p id="cargo"></p>
+</header>
+
+<div class="menu">
+    <button onclick="fecharSecoes(this)">Início</button>
+    <button onclick="mostrarSecao('sobre', this)">Sobre Mim</button>
+    <button onclick="mostrarSecao('habilidades', this)">Habilidades</button>
+    <button onclick="mostrarSecao('projetos', this)">Projetos</button>
+</div>
+
+<div id="sobre" class="secao">
+    <h2>Sobre Mim</h2>
+    <p>Estudante de programação apaixonado por desenvolvimento web, focado em HTML, CSS, JavaScript, PHP e MySQL.</p>
+</div>
+
+<div id="habilidades" class="secao">
+    <h2>Habilidades</h2>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>PHP</li>
+        <li>MySQL</li>
+    </ul>
+</div>
+
+<div id="projetos" class="secao">
+    <h2>Projetos</h2>
+    <p>SysFit - Sistema de gerenciamento fitness desenvolvido para aprendizado.</p>
+</div>
+
+<footer>
+    <h3>Entre em contato</h3>
+    <p>Em constante aprendizado, sempre em busca do próximo nível.</p>
+
+    <div class="redes">
+
+        <a href="https://linkedin.com/in/seuusuario" target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>
+
+        <a href="https://github.com/hoobold" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+
+        <a href="mailto:henhobold@gmail.com" target="_blank">
+            <i class="fas fa-envelope"></i>
+        </a>
+
+        <a href="https://wa.me/5599999999999"target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+        <a href="https://instagram.com/seuusuario" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+</footer>
+<script src="../JS/Java.js"></script>
+</body>
+</html>
