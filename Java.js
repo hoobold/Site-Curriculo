@@ -44,11 +44,14 @@ function escreverNome() {
         nomeElemento.textContent += nome.charAt(i);
         i++;
 
-        setTimeout(escreverNome, 120);
+        setTimeout(
+            escreverNome,
+            80 + Math.random() * 70
+        );
 
     } else {
 
-        setTimeout(escreverCargo, 40);
+        setTimeout(escreverCargo, 300);
     }
 }
 
@@ -59,7 +62,10 @@ function escreverCargo() {
         cargoElemento.textContent += cargo.charAt(j);
         j++;
 
-        setTimeout(escreverCargo, 50);
+        setTimeout(
+            escreverCargo,
+            50 + Math.random() * 40
+        );
     }
 }
 
