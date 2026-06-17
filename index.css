@@ -88,6 +88,11 @@ header {
     animation: piscar 1s infinite;
 }
 
+#texto-aprendizado::after {
+    content: "|";
+    animation: piscar 1s infinite;
+}
+
 @keyframes piscar {
     50% {
         opacity: 0;
@@ -110,33 +115,33 @@ html {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .menu button {
-    background: rgba(255, 255, 255, 0.05);
-    color: #f5f5f5;
-    border: 1px solid rgba(0, 212, 255, 0.2);
-    border-radius: 10px;
-    padding: 12px 24px;
+
+    background: rgba(0, 212, 255, 0.08);
+    color: #00d4ff;
+    border: 1px solid #00d4ff;
+    padding: 10px 20px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
+    transition: 0.3s;
 }
 
 .menu button:hover {
-    color: #00d4ff;
-    border-color: #00d4ff;
-    box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
-    transform: translateY(-2px);
+    background: #00d4ff;
+    color: #00111f;
+    box-shadow: 0 0 12px #00d4ff;
 }
 
 .menu button.ativo {
-    background: rgba(0, 212, 255, 0.15);
-    color: #00d4ff;
-    border-color: #00d4ff;
-    box-shadow: 0 0 20px rgba(0, 212, 255, 0.25);
+    background: #00d4ff;
+    color: #00111f;
+    box-shadow: 0 0 15px #00d4ff;
 }
+
 .secao {
     display: none;
 
@@ -160,6 +165,102 @@ html {
 
 .secao.ativa {
     display: block;
+}
+
+#habilidades li {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+#habilidades i {
+    width: 32px;
+    height: 32px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #00d4ff;
+
+    box-shadow:
+        0 0 8px rgba(0,212,255,.5);
+
+    margin-right: 10px;
+}
+
+#certificacoes li {
+    margin-bottom: 12px;
+}
+
+#certificacoes a {
+    color: #00d4ff;
+    text-decoration: none;
+    padding: 3px 6px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+#certificacoes a:hover {
+    background: rgba(0, 212, 255, 0.15);
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.4);
+}
+
+.barra {
+    width: 300px;
+    height: 10px;
+    background: #222;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+.progresso {
+    height: 100%;
+    width: 0;
+    border-radius: 10px;
+    background: linear-gradient(
+        90deg,
+        #00d4ff,
+        #fde6ff
+    );
+
+    box-shadow: 
+    0 0 8px #00d4ff,
+    0 0 15px rgba(0, 212, 255, 0.04)
+    ;
+
+    animation: preencher 2s ease-out forwards;
+}
+
+.progressohtml {
+    --largura-final: 90%;
+}
+
+.progressocss {
+    --largura-final: 90%;
+}
+
+.progressojs {
+    --largura-final: 70%;
+}
+
+.progressophp {
+    --largura-final: 60%;
+}
+
+.progressomysql {
+    --largura-final: 70%;
+}
+
+@keyframes preencher {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: var(--largura-final);
+    }
 }
 
 h2 {

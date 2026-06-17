@@ -1,6 +1,6 @@
 document.documentElement.style.scrollBehavior = "smooth";
 
-function fecharSecoes(botao) {
+function fecharSecoes() {
 
     document.querySelectorAll('.secao').forEach(secao => {
         secao.classList.remove('ativa');
@@ -9,8 +9,37 @@ function fecharSecoes(botao) {
     document.querySelectorAll('.menu button').forEach(btn => {
         btn.classList.remove('ativo');
     });
+}
 
-    botao.classList.add('ativo');
+let aprendizadoJaEscrito = false;
+
+function escreverAprendizado() {
+
+    if (aprendizadoJaEscrito) return;
+
+    aprendizadoJaEscrito = true;
+
+    const elemento =
+        document.getElementById("texto-aprendizado");
+
+    elemento.textContent = "";
+
+    indiceAprendizado = 0;
+
+    function digitar() {
+
+        if (indiceAprendizado < textoAprendizado.length) {
+
+            elemento.textContent +=
+                textoAprendizado.charAt(indiceAprendizado);
+
+            indiceAprendizado++;
+
+            setTimeout(digitar, 20);
+        }
+    }
+
+    digitar();
 }
 
 function mostrarSecao(id, botao) {
@@ -26,10 +55,15 @@ function mostrarSecao(id, botao) {
     });
 
     botao.classList.add('ativo');
+
+    if (id === "certificacoes") {
+        escreverAprendizado();
+    }
 }
 
 const nome = "Henrique Hobold";
 const cargo = "Desenvolvedor Full Stack em Formação";
+const textoAprendizado = "Minha formação prática foi construída através de cursos online, documentação oficial e projetos pessoais desenvolvidos para aplicar os conceitos estudados.";
 
 const nomeElemento = document.getElementById("nome");
 const cargoElemento = document.getElementById("cargo");
@@ -70,25 +104,6 @@ function escreverCargo() {
 }
 
 escreverNome();
-
-const habilidades = document.getElementById("habilidades");
-
-habilidades.innerHTML += `
-    <div style="
-        width:300px;
-        height:10px;
-        background:#222;
-        border-radius:10px;
-    ">
-        <div style="
-            width:80%;
-            height:100%;
-            background:#00d4ff;
-            border-radius:10px;
-        "></div>
-    </div>
-`;
-
 
 for (let i = 0; i < 100; i++) {
 
