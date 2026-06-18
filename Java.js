@@ -42,6 +42,10 @@ function escreverAprendizado() {
     digitar();
 }
 
+let sobreDigitado = false;
+let projetosDigitado = false;
+let aprendizadoDigitado = false;
+
 function mostrarSecao(id, botao) {
 
     document.querySelectorAll('.secao').forEach(secao => {
@@ -56,15 +60,53 @@ function mostrarSecao(id, botao) {
 
     botao.classList.add('ativo');
 
-    if (id === "certificacoes") {
-        escreverAprendizado();
+    if (id === "sobre" && !sobreDigitado) {
+        escreverTexto("texto-sobre", textoSobre);
+        sobreDigitado = true;
+    }
+
+    if (id === "projetos" && !projetosDigitado) {
+        escreverTexto("texto-projetos", textoProjetos);
+        projetosDigitado = true;
+    }
+
+    if (id === "certificacoes" && !aprendizadoDigitado) {
+        escreverTexto("texto-aprendizado", textoAprendizado);
+        aprendizadoDigitado = true;
     }
 }
+
+function escreverTexto(idElemento, texto) {
+
+    const elemento =
+        document.getElementById(idElemento);
+
+    elemento.textContent = "";
+
+    let indice = 0;
+
+    function digitar() {
+
+        if (indice < texto.length) {
+
+            elemento.textContent +=
+                texto.charAt(indice);
+
+            indice++;
+
+            setTimeout(digitar, 20);
+        }
+    }
+
+    digitar();
+}
+
 
 const nome = "Henrique Hobold";
 const cargo = "Desenvolvedor Full Stack em Formação";
 const textoAprendizado = "Minha formação prática foi construída através de cursos online, documentação oficial e projetos pessoais desenvolvidos para aplicar os conceitos estudados.";
-
+const textoSobre = "Sou estudante de Análise e Desenvolvimento de Sistemas, apaixonado por tecnologia e desenvolvimento de software. Estou constantemente estudando e criando projetos para aprimorar minhas habilidades.";
+const textoProjetos = "Este portfólio foi desenvolvido utilizando HTML, CSS e JavaScript. Também possuo experiência com PHP e MySQL, aplicando os conhecimentos adquiridos em projetos práticos.";
 const nomeElemento = document.getElementById("nome");
 const cargoElemento = document.getElementById("cargo");
 

@@ -6,7 +6,10 @@
     <title>Meu Portfólio</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
 </head>
 <body>
 
@@ -23,94 +26,97 @@
     <button onclick="mostrarSecao ('certificacoes', this)">Aprendizado</button>
 </div>
 
-<div id="sobre" class="secao">
-    <h2>Sobre Mim</h2>
-    <p>Estudante de programação apaixonado por desenvolvimento web, focado em HTML, CSS, JavaScript, PHP e MySQL.</p>
-</div>
+<div class="painel">
 
-<div id="habilidades" class="secao">
-    <h2>Habilidades</h2>
-    <ul>
+    <div id="sobre" class="secao">
+        <h2>Sobre Mim</h2>
+        <p id="texto-sobre"></p>
+    </div>
 
-        <li>
-            <i class="fa-brands fa-html5"></i>
-            HTML
-            <div class="barra">
-                <div class="progresso progressohtml"></div>
-            </div>
-        </li>
+    <div id="habilidades" class="secao">
+        <h2>Habilidades</h2>
+        <ul>
 
-        <li>
-         <i class="fa-brands fa-css3-alt"></i>
-            CSS
-            <div class="barra">
-                <div class="progresso progressocss"></div>
-            </div>
-        </li>
+            <li>
+                <i class="devicon-html5-plain colored"></i>
+                HTML
+                <div class="barra">
+                    <div class="progresso progressohtml"></div>
+                </div>
+            </li>
 
-        <li>
-            <i class="fa-brands fa-js"></i>
-            JavaScript
-            <div class="barra">
-                <div class="progresso progressojs"></div>
-            </div>
-        </li>
+            <li>
+            <i class="devicon-css3-plain colored"></i>
+                CSS
+                <div class="barra">
+                    <div class="progresso progressocss"></div>
+                </div>
+            </li>
 
-        <li>
-            <i class="fa-brands fa-php"></i>
-            PHP
-            <div class="barra">
-                <div class="progresso progressophp"></div>
-            </div>
-        </li>
-
-        <li>
-            <i class="fa-solid fa-database"></i>
-            MySQL
-            <div class="barra">
-                <div class="progresso progressomysql"></div>
-            </div>
-        </li>
-
-    </ul>
-</div>
-
-<div id="projetos" class="secao">
-    <h2>Projetos</h2>
-    <p>SysFit - Sistema de gerenciamento fitness desenvolvido para aprendizado.</p>
-</div>
-
-<div id="certificacoes" class="secao">
-
-    <h2>Aprendizado</h2>
-
-    <ul>
-        <li>
-            <a href="https://www.cursoemvideo.com/curso/curso-html5-e-css3-modulo-5-de-5-40-horas/" target="_blank">
-                HTML e CSS
-            </a>
-        </li>
-
-        <li>
-            <a href="https://www.cursoemvideo.com/curso/javascript/" target="_blank">
+            <li>
+                <i class="devicon-javascript-plain colored"></i>
                 JavaScript
-            </a>
-        </li>
+                <div class="barra">
+                    <div class="progresso progressojs"></div>
+                </div>
+            </li>
 
-        <li>
-            <a href="https://www.cursoemvideo.com/curso/php-basico/" target="_blank">
+            <li>
+                <i class="devicon-php-plain colored"></i>
                 PHP
-            </a>
-        </li>
+                <div class="barra">
+                    <div class="progresso progressophp"></div>
+                </div>
+            </li>
 
-        <li>
-            <a href="https://www.cursoemvideo.com/curso/mysql/" target="_blank">
+            <li>
+                <i class="devicon-mysql-plain colored"></i>
                 MySQL
-            </a>
-        </li>
-    </ul>
-    <p id="texto-aprendizado"></p>
+                <div class="barra">
+                    <div class="progresso progressomysql"></div>
+                </div>
+            </li>
 
+        </ul>
+    </div>
+
+    <div id="projetos" class="secao">
+        <h2>Projetos</h2>
+        <p id="texto-projetos"></p>
+    </div>
+
+    <div id="certificacoes" class="secao">
+
+        <h2>Aprendizado</h2>
+
+        <ul>
+            <li>
+                <a href="https://www.cursoemvideo.com/curso/curso-html5-e-css3-modulo-5-de-5-40-horas/" target="_blank">
+                    HTML e CSS
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.cursoemvideo.com/curso/javascript/" target="_blank">
+                    JavaScript
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.cursoemvideo.com/curso/php-basico/" target="_blank">
+                    PHP
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.cursoemvideo.com/curso/mysql/" target="_blank">
+                    MySQL
+                </a>
+            </li>
+        </ul>
+        <p id="texto-aprendizado"></p>
+
+    </div>
 </div>
 
 <footer>
@@ -131,11 +137,11 @@
             <i class="fas fa-envelope"></i>
         </a>
 
-        <a href="https://wa.me/5599999999999"target="_blank">
+        <a href="https://wa.me/5548984491167"target="_blank">
             <i class="fab fa-whatsapp"></i>
         </a>
 
-        <a href="https://instagram.com/seuusuario" target="_blank">
+        <a href="https://instagram.com/hoboldhen" target="_blank">
             <i class="fab fa-instagram"></i>
         </a>
     </div>
