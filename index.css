@@ -36,10 +36,16 @@
     
     .barra {
         width: 100%;
-        max-width: 300px;
+        max-width: 250px;
         height: 10px;
         background: #222;
         border-radius: 10px;
+    }
+
+    #habilidades li {
+        list-style: none;
+        margin-bottom: 20px;
+        width: 100%;
     }
 
     :root {
