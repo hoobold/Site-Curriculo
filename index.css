@@ -48,6 +48,18 @@
         width: 100%;
     }
 
+    @media (max-width: 768px) {
+
+    .habilidades-container {
+        display: block;
+    }
+
+    #descricao-habilidade {
+        display: none;
+    }
+
+}
+
     :root {
     --preto: #0d1117;
     --ciano: #00d4ff;
@@ -210,6 +222,59 @@ html {
         0 0 8px rgba(0,212,255,.5);
 
     margin-right: 10px;
+}
+
+.habilidades-container {
+    display: flex;
+    gap: 150px;
+    align-items: center;
+}
+
+#descricao-habilidade {
+
+    width: 500px;
+    min-height: 200px;
+    padding: 30px;
+    margin-left: 150px;
+    border: 1px solid #00d5ff13;
+    border-radius: 12px;
+    background: linear-gradient(
+        135deg,
+        #00000025,
+        #00a7cc6b
+    );
+    color: white;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    box-shadow:
+        0 0 10px rgba(0, 213, 255, 0.534);
+
+    transition: 
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    animation: aparecer 4.2s ease;
+}
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+.skill-info {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
 }
 
 #certificacoes li {

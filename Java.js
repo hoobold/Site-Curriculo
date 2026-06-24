@@ -103,15 +103,51 @@ function escreverTexto(idElemento, texto) {
 
 
 const nome = "Henrique Hobold";
-const cargo = "Desenvolvedor Full Stack em Formação";
+const cargo = "Desenvolvedor Full-Stack em Formação";
 const textoAprendizado = "Minha formação prática foi construída através de cursos online, documentação oficial e projetos pessoais desenvolvidos para aplicar os conceitos estudados.";
 const textoSobre = "Sou estudante de Análise e Desenvolvimento de Sistemas, apaixonado por tecnologia e desenvolvimento de software. Estou constantemente estudando e criando projetos para aprimorar minhas habilidades.";
 const textoProjetos = "Este portfólio foi desenvolvido utilizando HTML, CSS e JavaScript. Também possuo experiência com PHP e MySQL, aplicando os conhecimentos adquiridos em projetos práticos.";
 const nomeElemento = document.getElementById("nome");
 const cargoElemento = document.getElementById("cargo");
+const descricoes = {
+
+    html:
+        "Estruturação semântica de páginas web, formulários e acessibilidade.",
+
+    css:
+        "Estilização avançada, responsividade, Flexbox e animações.",
+
+    javascript:
+        "Manipulação do DOM, eventos, lógica e consumos de APIs.",
+
+    php:
+        "Desenvolvimento back-end, processamento de dados e integração com bancos de dados.",
+
+    mysql:
+        "Modelagem, consultas SQL e gerenciamento de banco de dados relacionais."
+
+};
 
 let i = 0;
 let j = 0;
+
+const painelHabilidade =
+    document.getElementById("descricao-habilidade");
+
+document
+    .querySelectorAll(".skill-info")
+    .forEach(item => {
+
+item.addEventListener("mouseenter", () => {
+
+    painelHabilidade.textContent =
+        descricoes[
+            item.parentElement.dataset.skill
+        ];
+
+});
+
+});
 
 function escreverNome() {
 
